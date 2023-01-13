@@ -15,3 +15,4 @@ yarn-error.log*
 
 .env
 config.js
+commands.txt

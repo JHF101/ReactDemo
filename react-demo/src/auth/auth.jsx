@@ -2,9 +2,8 @@ import axios from "axios";
 import config from '../config/config';
 
 function getApiToken() {
-
-  // Send a request for authorization
-    const response = axios.request({
+    // Send a request f or authorization
+    axios.request({
         method:'POST',
         url: config.AUTH_ENDPOINT,
         baseURL: config.BASE_ENDPOINT,
@@ -28,9 +27,6 @@ function getApiToken() {
             console.error(err);
         });
 }
-
-
-// Test other API endpoints
 
 
 export default getApiToken;
