@@ -15,4 +15,5 @@ yarn-error.log*
 
 .env
 config.js
+config.jsx
 commands.txt
