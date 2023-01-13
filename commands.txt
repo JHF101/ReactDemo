@@ -2,6 +2,7 @@ Packages:
 npm create vite@latest
 npm install formik --save
 npm install @mui/material @emotion/react @emotion/styled
+npm install dotenv --save
 
 OAuth Additional Packages:
 https://www.npmjs.com/package/react-simple-oauth2-login

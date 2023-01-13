@@ -1,32 +1,27 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+import OAuth2Login from 'react-simple-oauth2-login';
+import ReactDOM from 'react-dom';
+import Debugger from './components/debug';
+// Environment is not working so doing hardcoded config
+import config from './config/config';
+const onSuccess = response => console.log(response);
+const onFailure = response => console.error(response);
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Debugger/>
+      <OAuth2Login
+          authorizationUrl={config.AUTH_ENDPOINT}
+          responseType="token"
+          clientId={config.CLIENT_ID}
+          redirectUri="http://localhost:3000/oauth-callback"
+          onSuccess={onSuccess}
+          onFailure={onFailure}/>
     </div>
   )
 }
