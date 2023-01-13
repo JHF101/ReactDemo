@@ -1,0 +1,10 @@
+Packages:
+npm create vite@latest
+npm install formik --save
+npm install @mui/material @emotion/react @emotion/styled
+
+OAuth Additional Packages:
+https://www.npmjs.com/package/react-simple-oauth2-login
+
+Running the dev server:
+npm run dev -- --port 3000
