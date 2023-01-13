@@ -7,13 +7,15 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-
-
-const generateAPIToken = getApiToken();
+import Login from './components/login';
 
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <Login />,
+  },
+  {
+    path: "app",
     element: <App />,
   },
   {
