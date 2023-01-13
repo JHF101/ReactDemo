@@ -3,7 +3,7 @@ import { Formik } from 'formik';
 import axios from 'axios';
 import config from '../config/config';
 import { redirect } from "react-router-dom";
-
+import { Routes, Route, Link, Navigate } from 'react-router-dom';
 
 const Login = () => (
     <div>
@@ -50,6 +50,7 @@ const Login = () => (
                     });
                     setSubmitting(false);
                 }, 400);
+                return <Navigate to="/app" replace />;
             }
         }
         >
