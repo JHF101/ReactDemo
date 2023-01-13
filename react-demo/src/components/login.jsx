@@ -61,12 +61,12 @@ const Login = () => (
             handleBlur,
             handleSubmit,
             isSubmitting,
-            /* and other goodies */
         }) => (
             <form onSubmit={handleSubmit}>
             <input
                 type="email"
                 name="email"
+                placeholder="Email"
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.email}
@@ -75,6 +75,7 @@ const Login = () => (
             <input
                 type="password"
                 name="password"
+                placeholder="Password"
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.password}
